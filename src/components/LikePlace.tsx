@@ -12,6 +12,7 @@ import {type Place, PlaceData} from "./PlaceData.ts";
 
 export default function LikePlace({id}: { id: string}) {
     const [places, setPlaces] = useState<Place[]>([]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const loadPlaces = async () => {
         try {
             const newPlaces = await PlaceData();
