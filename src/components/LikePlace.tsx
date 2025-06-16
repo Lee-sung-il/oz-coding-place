@@ -28,11 +28,10 @@ export default function LikePlace({id}: { id: string}) {
     useEffect(
         () => {
             loadPlaces().then();
-        }, []
-    )
+        },[loadPlaces])
 
     return (
-        <span className="container">
+        <div  className="container">
             {places
                 .map((place) => (
                 <Card   key={place.id} sx={{maxWidth: 345}}>
@@ -63,6 +62,6 @@ export default function LikePlace({id}: { id: string}) {
 
                 </Card>
             ))}
-        </span>
+        </div>
     )
 }
