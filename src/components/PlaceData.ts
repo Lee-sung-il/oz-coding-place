@@ -8,6 +8,8 @@ export interface Place {
         src: string,
         alt: string
     }
+    lat: number;
+    lon: number;
 }
 
 export async function PlaceData():Promise<Place[]> {
